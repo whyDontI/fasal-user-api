@@ -5,7 +5,6 @@
     "recurse": true,
     "destination": "./docs/",
     "template": "node_modules/better-docs/"
-
   },
   "source": {
     "include": ["./"],
