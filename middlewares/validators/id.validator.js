@@ -2,10 +2,10 @@ const __ = require('../../util/response.util')
 const mongoose = require('mongoose')
 
 /*
- *isValidId() Validation for mongoose _id
+ *Validation for mongoose _id
  *@param {object} req
  *@param {object} res
- *@param {Function} next
+ *@param {callback} next
  *@param {req.params.id} user _id
  *@return {undefined}
  * */
