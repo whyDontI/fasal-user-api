@@ -6,14 +6,15 @@
   "scripts": {
     "start": "node server.js",
     "hooks:pre-commit": "node ./gitHooks/preCommit.js",
-    "hooks:pre-push": "node ./gitHooks/prePush.js"
+    "hooks:pre-push": "node ./gitHooks/prePush.js",
+    "docs": "./node_modules/jsdoc/jsdoc.js -c ./.jsdoc.conf.json"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@hapi/joi": "^17.1.0",
     "axios": "^0.19.2",
-    "bcrypt": "^4.0.1",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "bunyan": "^1.8.12",
     "bunyan-express-serializer": "^1.0.0",
@@ -30,8 +31,10 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "better-docs": "^2.3.2",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "jsdoc": "^3.6.5",
     "mocha": "^8.1.1",
     "shelljs": "^0.8.4",
     "standard": "^14.3.1"

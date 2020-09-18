@@ -3,10 +3,10 @@ const userQuery = require('../dataAdapter/mongo/query/user.query')
 const md5 = require('md5')
 
 /**
- *_userLogin() User login
+ *User login
  *@param {object} body - Express req.body
- *@param {string} body.phoneNumber - phonwNumber
- *@param {string} body.password - password
+ *@param {string} body.phoneNumber - Phone Number
+ *@param {string} body.password - Password
  *@return {Promise<Object>}
  * */
 async function _userLogin ({
@@ -34,12 +34,12 @@ async function _userLogin ({
 };
 
 /**
- *_createUser() Create new User
+ *Creates new User
  *@param {object} body - Express body object
- *@param {string} body.name - name
- *@param {string} body.email - email
- *@param {string} body.phoneNumber - phoneNumber
- *@param {string} body.password - password
+ *@param {string} body.name - Name
+ *@param {string} body.email - Email
+ *@param {string} body.phoneNumber - Phone Number
+ *@param {string} body.password - Password
  *@return {Promise}
  * */
 async function _createUser ({
@@ -73,7 +73,7 @@ async function _createUser ({
 };
 
 /**
- *_updateUser() Update User
+ *Updates User
  *@param {string} id - User _id
  *@param {object} data - User data to be updated
  *@return {Promise<Object>}
@@ -93,10 +93,9 @@ async function _updateUser (id, data) {
 }
 
 /**
- *_deleteUser() Delete User
- *@param {object} req
- *@param {object} res
- *@return {undefined}
+ *Delete User
+ *@param {string} id - User _id
+ *@return {Promise<Object>}
  * */
 async function _deleteUser (id) {
   try {
@@ -109,7 +108,7 @@ async function _deleteUser (id) {
 }
 
 /**
- *_getOneUser() Get One User
+ *Returns One User
  *@param {string} id - User _id
  *@return {Promise<Object>}
  * */
@@ -126,7 +125,7 @@ async function _getOneUser (id) {
 }
 
 /**
- *_getUser() Get Users
+ *Get Users
  *@param {Object} req.query - Express req.query
  *@return {Promise<Object>}
  * */

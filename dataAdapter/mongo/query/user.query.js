@@ -1,7 +1,7 @@
 const user = require('../models/user.model')
 
 /**
- *__getUserById() Get user by Id
+ *Returns user with given _id
  *@param {string} id - User _id
  *@return {Promise<mongoose.Query>}
  * */
@@ -13,8 +13,8 @@ async function __getUserById (id) {
 }
 
 /**
- *__getUserByEmail() Get user by Email
- *@param {string} email - user email
+ *Returns user with give email
+ *@param {string} email - User email
  *@return {Promise}
  * */
 async function __getUserByEmail (email) {
@@ -25,8 +25,8 @@ async function __getUserByEmail (email) {
 }
 
 /**
- *__getUserByNumber() Get user by Number
- *@param {string} number - user Number
+ *Returns user with given phoneNumber
+ *@param {string} number - User Number
  *@return {Promise}
  * */
 async function __getUserByNumber (number) {
@@ -37,7 +37,7 @@ async function __getUserByNumber (number) {
 }
 
 /**
- *__getUserCount() Get user Count
+ *Returns user count
  *@param {string} phoneNumber - User phoneNumber
  *@return {Promise<mongoose.Query>}
  * */
@@ -49,7 +49,7 @@ async function __getUserCount (phoneNumber) {
 }
 
 /**
- *__getUsers() Get users
+ *Returns all users present in system
  *@param {Object} req.query - Express req.query
  *@param {string} query.search - Search string
  *@param {number} query.sort - [sort = -1] One for ascending / negative one for descending
@@ -81,7 +81,7 @@ async function __getUsers ({
 }
 
 /**
- *__insertUserDetails() Create New user with provided details
+ *Creates new user with provided details
  *@param {object} userdata - User Data object
  *@param {string} userdata.name - User name
  *@param {string} userdata.email - User email
@@ -94,7 +94,7 @@ async function __insertUserDetails (userData) {
 }
 
 /**
- *__updateUserDetails() Update user
+ *Updates user
  *@param {string} id - User _id
  *@param {object} data - Data to be updated
  *@return {Promise<mongoose.Query>}
@@ -108,7 +108,7 @@ async function __updateUserDetails (id, data) {
 }
 
 /**
- *__deleteUser() Delete user
+ *Deletes user
  *@param {string} id - User _id
  *@return {Promise<mongoose.Query>}
  * */
